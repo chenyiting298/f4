@@ -1,0 +1,50 @@
+/**
+ * Created by Administrator on 2018/12/5.
+ */
+$(document).ready(function(){
+    $('.parent').click(function(){
+        console.log($('span').parent());
+    })
+    $('.parents').click(function(){
+        console.log($('span').parents());
+    })
+    $('.parentsUntil').click(function(){
+        console.log($('span').parentsUntil('div'));
+    })
+    $('.children').click(function(){
+        console.log($('ul').children());
+    })
+    $('.find').click(function(){
+        console.log($('ul').find('*'));
+    })
+    $('.findSpan').click(function(){
+        console.log($('ul').find('span'));
+    })
+    $('.siblings').click(function(){
+        console.log($('span').siblings());
+    })
+    $('.next').click(function(){
+        console.log($('span').next());
+    })
+    $('.nextAll').click(function(){
+        console.log($('span').nextAll());
+    })
+    $('.nextUntil').click(function(){
+        console.log($('span').nextUntil('s'));
+    })
+    $('.first').click(function(){
+        console.log($('span').first());
+    })
+    $('.last').click(function(){
+        console.log($('span').last());
+    })
+    $('.eq').click(function(){
+        console.log($('span').eq(1));
+    })
+    $('.filter').click(function(){
+        console.log($('span').filter('climate'));
+    })
+    $('.not').click(function(){
+        console.log($('span').not('climate'));
+    })
+})

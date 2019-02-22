@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./javascriptBasic.js">// 外链式引入javascript
+    </script>
+</head>
+<body>
+    <p id="html1"></p>
+    <p id="html2"></p>
+    <p id="html3"></p>
+    <p id="html4"></p>
+    <script type="text/javascript">//内嵌式引入javascript
+        //行注释
+        /*段落注释，顾名思义可以包含多行*/
+        var a=3;//用于声明变量的关键字var，a为变量名,这种变量是全局变量
+        document.getElementById('html1').innerHTML= a;
+        document.getElementById('html2').onclick=funDemo;//函数的调用
+         //数组的创建三种方式
+        var arrayDemo1=new Array();
+        var arrayDemo2=new Array(3);
+        var arrayDemo3=new Array('张三','李四','王五');
+        document.getElementById('html2').innerHTML=arrayDemo3[2];//数组中一个元素的引用
+        arrayDemo1[0]=123;
+        arrayDemo1[1]=456;
+        var i;
+        for(i in arrayDemo1){ //循环输出数组中内容
+            document.getElementById('html4').innerHTML+=arrayDemo1[i];
+        }
+        //alert(arrayDemo1.length); //数组对象的常用属性length
+        //alert(arrayDemo1.toString());// 数组对象的常用方法toString()
+        document.getElementById('html3').innerHTML=arrayDemo1[0];
+        function funDemo(){             //函数的声明
+            var b=5;  //局部变量
+            alert('函数调用成功！'+b);
+            return b;
+        }
+        // 二维数组的创建于赋值
+        var demo=new Array(3);
+        demo[0]=new Array(1,2);
+        demo[1]=new Array(3,4);
+        demo[2]=new Array(5,6);
+        for(var m in demo ){
+            for(var n in demo[m]){
+                console.log(demo[m][n]);
+            }
+        }
+    </script>
+</body>
+</html>

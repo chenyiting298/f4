@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="father" name="father">
+        <div id="firstSon" name="firstSon" class="firstSon">第一个子节点</div>
+        <div id="secondSon">第二个子节点</div>
+    </div>
+    <script type="text/javascript">
+        var father=document.getElementById('father');//通过ID名获取某个节点
+        console.log(father);
+        var nameFather=document.getElementsByName('father')[0];//通过name属性获取某个节点
+        console.log(nameFather);
+        var firstSon=document.getElementById('firstSon');
+        var secondSon=document.getElementById('secondSon');
+//        var secondSon=document.getElementByName(secondSon);//通过标签名称获取某个节点
+//        var secondSon=document.getElementByClassName(secondSon);通过类名获取某个节点（IE6~8浏览器不支持）
+//        var secondSon=document.getElementByTagName(secondSon);通过标签名获得某个节点
+        var Demo1=secondSon.parentNode;//获得父节点
+        //Demo1.innerHTML="1px solid #4ee";
+        var Demo2=father.childNodes[0];//获得全部子节点
+        //Demo2.innerHTML="1px solid #4ee";
+        var Demo3=father.lastChild;//获得最后一个子节点
+        //Demo3.innerHTML="1px solid #4ee";
+        var Demo4=father.firstChild;//获得第一个子节点
+        //Demo4.innerHTML="1px solid #4ee";
+        var Demo5=secondSon.previousSibling;//获得上一个兄弟节点
+        //Demo5.innerHTML="1px solid #4ee";
+        var Demo6=firstSon.nextSibling;//获得下一个兄弟节点
+        //Demo6.innerHTML="1px solid #4ee";
+        var newDiv=document.createElement('div');//创建元素节点
+        father.appendChild(newDiv);//增加一个子节点
+        father.insertBefore(newDiv,father.firstChild);//在指定位置插入子节点
+        //father.removeChild(secondSon);//删除某个子节点
+        newDiv.innerHTML="新建html元素";       //元素内容操作
+        newDiv.className='newDiv';            //元素样式属性操作
+        newDiv.style="border:1px solid #4ee;";
+        newDiv.style.fontSize='20px';/*style操作样式时样式名之间有-时改为驼峰命名*/
+        //alert(newDiv.getAttribute('class'));      //获取元素指定属性
+        newDiv.setAttribute('class','newDiv1');     //设置元素指定属性
+        //newDiv.removeAttribute('style');          //删除元素指定属性
+        //数值型类型
+        var x=12,y=123.233,z='hello world',w=true;
+        console.log('x='+x+'\n'+' y='+y+' z='+z+' w='+w);
+        console.log(Number(z));
+       // alert(4*(29+4)%3);       //运算符优先级
+        var a= 4,b= 5,c=6;
+//        if(a>c){
+//            alert("不可能输出");
+//        }
+//         if(a>b){                         //if条件判断
+//             alert("a>b");
+//         }else if(a>c){
+//           alert('a>c');
+//        }else{
+//             alert('a<b and a<c');
+//         }
+//        switch(b){                      //switch条件判断
+//            case 0:
+//                alert('b=0');
+//                //break;
+//            case 1:
+//                alert('b=1');
+//               // break;
+//            default:
+//                alert('b='+b);
+//        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+$(doument).ready(function(){
+    $(".show").click(function(){
+        $(".top").show(2000,test);
+        $(".bottom").show(3000);
+    })
+    $(".hide").click(function(){
+        $(".top").hide();
+        $(".bottom").hide(3000);
+    })
+    $(".toggle").click(function(){
+        $(".top").toggle();
+        $(".bottom").toggle(3000);
+    })
+    $(".fadeOut").click(function(){
+        $(".top").fadeOut();
+        $(".bottom").fadeOut(3000);
+    })
+    $(".fadeOut").click(function(){
+        $(".top").fadeOut()
+    })
+})

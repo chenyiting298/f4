@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./jq/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="./jq/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="./jq/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+            $( "#menu" ).menu();
+        } );
+    </script>
+    <style>
+        .ui-menu { width: 150px; }
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li class="ui-state-disabled"><div>玩具 (不适用)</div></li>
+    <li><div>图书</div></li>
+    <li><div>服装</div></li>
+    <li><div>电子产品</div>
+        <ul>
+            <li class="ui-state-disabled"><div>家庭娱乐</div></li>
+            <li><div>汽车高保真</div></li>
+            <li><div>公用事业</div></li>
+        </ul>
+    </li>
+    <li><div>电影</div></li>
+    <li><div>音乐</div>
+        <ul>
+            <li><div>岩石</div>
+                <ul>
+                    <li><div>代替</div></li>
+                    <li><div>经典</div></li>
+                </ul>
+            </li>
+            <li><div>爵士乐</div>
+                <ul>
+                    <li><div>Freejazz</div></li>
+                    <li><div>大乐队</div></li>
+                    <li><div>现代</div></li>
+                </ul>
+            </li>
+            <li><div>流行的</div></li>
+        </ul>
+    </li>
+    <li class="ui-state-disabled"><div>特价 (不适用)</div></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="father" class="father" name='father'>
+        <div id="firstSon" class="firstSon"></div>
+        <div id="secondSon" class="secondSon"></div>
+    </div>
+    <script>
+        var father=document.getElementById('father');
+        var classFather=document.getElementsByClassName('father')[0];
+        var nameFather=document.getElementsByName('father')[0];
+        var tagFather=document.getElementsByTagName('div')[0];
+        var children=document.getElementById('father').childNodes[1];
+        var firstC=document.getElementById('father').firstChild;
+        var pre=document.getElementById('father').nextElementSibling;
+        var next=document.getElementsByTagName('script')[0].previousElementSibling;
+        var firstSon=document.getElementById('firstSon');
+        var newDiv=document.createElement('div');
+        father.appendChild(newDiv);
+        father.insertBefore(newDiv,father.firstChild);
+        father.removeChild(newDiv);
+        var firstSon=document.getElementById("firstSon");
+        firstSon.innerHTML="改变第一个子元素的内容";
+        console.log(firstSon.className);
+        firstSon.className="firstSon";
+        firstSon.style="border:1px solid";
+        console.log(firstSon.offsetWidth);
+        console.log(firstSon.offsetHeight);
+        console.log(firstSon.scrollWidth);
+        console.log(firstSon.scrollHeight);
+        console.log(firstSon.offsetTop);
+        console.log(firstSon.offsetLeft);
+        console.log(firstSon.scrollTop);
+        console.log(firstSon.scrollLeft);
+        console.log(father.getAttribute("id"));
+        father.setAttribute("id","classFather");
+        father.removeAttribute("id");
+        var a="my name is dave";
+        var demo=null;
+        demo="dww"/3;
+        console.log(demo);
+        b=5;
+        c="5";
+        console.log(b==c);
+        console.log(b===c);
+        b==c?console.log("b equal c"):console.log("b is not equal c");
+        var x= 4,y= 5,z=6;
+        if(x>y){
+            alert("x>y");
+       }
+        else if(x>z){
+            alert(x>z);
+        }
+        else{
+            alert("x<y,x<z");
+        }
+        switch(x){
+            case 1:
+                alert("x=1");
+                break;
+            case 2:
+                alert("x=2");
+                break;
+            case 4:
+                alert("x=4");
+                break;
+            default :alert("no x");
+        }
+    </script>
+</body>
+</html>
